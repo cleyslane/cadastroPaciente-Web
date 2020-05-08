@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="cadPac_app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro de Paciente</title>
+		<script src="https://code.angularjs.org/1.5.9/angular.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	
+	<body>
+		<div ng-controller="cadPac_controller">
+			<p>Médico Responsável: 
+				<select ng-model="cadPac.medico" ng-options="item for item in medicos"></select>
+			</p>
+			<p>Nome do Paciente: <input type="text" ng-model="cadPac.nome"></p>
+			<p>Tipo sanguíneo: <input type="text" ng-model="cadPac.tipoSang"></p>
+			
+			<p> <button ng-click="salvar()"> Enviar </button></p>
+			
+			<p> {{ mensagem }} </p>
+		
+		</div>
+	</body>
+</html>
